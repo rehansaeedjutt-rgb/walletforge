@@ -1,0 +1,46 @@
+{
+  "name": "walletforge",
+  "version": "0.1.0",
+  "description": "Non-custodial EVM wallet toolkit: HD derivation, multi-chain balances, offline signing.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "walletforge": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests --ext .ts",
+    "clean": "Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue"
+  },
+  "keywords": [
+    "ethereum",
+    "wallet",
+    "web3",
+    "bip39",
+    "bip44",
+    "hd-wallet",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "Muhammad Rehan Saeed",
+  "dependencies": {
+    "@scure/bip32": "^1.5.0",
+    "@scure/bip39": "^1.4.0",
+    "commander": "^12.1.0",
+    "ethers": "^6.13.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
